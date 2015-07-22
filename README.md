@@ -11,12 +11,12 @@ use EventHomes\Api\Webhooks\MandrillWebhookController;
 
 class MyController extends MandrillWebhookController {
 
-    private function handleHardBounce($payload)
+    public function handleHardBounce($payload)
     {
         $email = $payload['msg']['email'];
     }
 
-    private function handleReject($payload)
+    public function handleReject($payload)
     {
         $email = $payload['msg']['email'];
     }

@@ -1,6 +1,6 @@
 {
   "name": "eventhomes/laravel-mandrillhooks",
-  "description": "Compatible with Laravel 5+ and Lumen 5+.",
+  "description": "A simple Mandrill webhook controller to help with events. Compatible with Laravel 5+ and Lumen 5+.",
   "keywords": [
     "laravel",
     "lumen",

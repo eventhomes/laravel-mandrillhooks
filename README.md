@@ -6,14 +6,13 @@ A simple Mandrill webhook controller to help with email events. Useful for notif
 
 ## Basic Usage
 
-1. In your routes.php file add the following.
+1) In your routes.php file add the following.
 ```php
 post('mandrill-webhook', ['as' => 'mandrill.webhook', 'uses' => 'MandrillController@handleWebHook']);
 ```
 
-2. Create a controller that extends MandrillWebhookController as follows. You can then handle any Mandrillapp webhook event.
+2) Create a controller that extends MandrillWebhookController as follows. You can then handle any Mandrillapp webhook event.
 ```php
-...
 use EventHomes\Api\Webhooks\MandrillWebhookController;
 
 class MyController extends MandrillWebhookController {

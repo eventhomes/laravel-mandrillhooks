@@ -1,4 +1,8 @@
 # Laravel 5 / Lumen 5 Mandrill Webhook Controller
+[![Latest Version](https://img.shields.io/github/release/eventhomes/laravel-mandrillhooks.svg?style=flat-square)](https://github.com/eventhomes/laravel-mandrillhooks/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Total Downloads](https://img.shields.io/packagist/dt/eventhomes/laravel-mandrillhooks.svg?style=flat-square)](https://packagist.org/packages/eventhomes/laravel-mandrillhooks)
+
 A simple Mandrill webhook controller to help with email events. Useful for notifying users that you cannot reach them via email inside your application. Compatible with Laravel 5+ and Lumen 5+.
 
 ## Installation
@@ -41,7 +45,7 @@ class MyController extends MandrillWebhookController {
 
 [Webhook event types](https://mandrill.zendesk.com/hc/en-us/articles/205583217-Introduction-to-Webhooks#event-types):
 
-Event type              | Method             | Description 
+Event type              | Method             | Description
 ------------            |------------        |---------------
 Sent	                | handleSend()       | message has been sent successfully
 Bounced	                | handleHardBounce() | message has hard bounced

@@ -2,7 +2,6 @@
 
 namespace EventHomes\Api\Webhooks;
 
-
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,11 +20,10 @@ class MandrillWebhookController extends Controller
         $events = $this->getJsonPayloadFromRequest($request);
 
         foreach ($events as $event) {
-
             $eventName = isset($event['event']) ? $event['event'] : 'undefined';
             $method = 'handle' . studly_case(str_replace('.', '_', $eventName));
 
-            if ( method_exists($this, $method) ) {
+            if (method_exists($this, $method)) {
                 $this->{$method}($event);
             }
         }

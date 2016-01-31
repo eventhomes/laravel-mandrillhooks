@@ -45,8 +45,8 @@ post('mandrill-webhook', ['as' => 'mandrill.webhook', 'uses' => 'MandrillControl
 
 3) Make sure you add your webhook in Mandrill to point to your route. You can do this here: https://mandrillapp.com/settings/webhooks
 
-## Webhook Authentication
-First, add the *MandrillWebhookServiceProvider* provider to the providers array in config/app.php
+## (Optional) Webhook Authentication
+If you would like to increase the security of the webhooks. Add the *MandrillWebhookServiceProvider* provider to the providers array in config/app.php
 
 ```php
 'providers' => [

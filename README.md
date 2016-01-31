@@ -67,5 +67,5 @@ Recipient Unsubscribes  | handleUnsub()      | recipient unsubscribes
 Rejection Blacklist Changes	| handleBlacklist()  | triggered when a Rejection Blacklist entry is added, changed, or removed
 Rejection Whitelist Changes	| handleWhitelist()  | triggered when a Rejection Whitelist entry is added or removed
 
-## Contributers
+## Contributors
 Special thanks to @rafaelbeckel and @minioak!

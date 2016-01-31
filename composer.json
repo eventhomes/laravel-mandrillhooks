@@ -1,29 +1,27 @@
 {
-  "name": "eventhomes/laravel-mandrillhooks",
-  "description": "A simple Mandrill webhook controller to help with events. Compatible with Laravel 5+ and Lumen 5+.",
-  "keywords": [
-    "laravel",
-    "lumen",
-    "mandrill",
-    "webhooks",
-    "mail"
-  ],
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Bill Richards",
-      "email": "roundedvision@gmail.com"
-    }
-  ],
-  "require": {
-    "php": ">=5.5.9",
-    "illuminate/support": "~5.0",
-    "illuminate/routing": "~5.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "EventHomes\\Api\\Webhooks\\": "src/"
-    }
-  },
-  "minimum-stability": "stable"
+    "name": "eventhomes/laravel-mandrillhooks",
+    "description": "A simple Mandrill webhook controller to help with events. Compatible with Laravel 5+ and Lumen 5+.",
+    "keywords": [
+        "laravel",
+        "lumen",
+        "mandrill",
+        "webhooks",
+        "mail"
+    ],
+    "license": "MIT",
+    "authors": [{
+        "name": "Bill Richards",
+        "email": "roundedvision@gmail.com"
+    }],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "~5.0",
+        "illuminate/routing": "~5.0"
+    },
+    "autoload": {
+        "psr-2": {
+            "EventHomes\\Api\\Webhooks\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
 }

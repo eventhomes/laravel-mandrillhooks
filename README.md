@@ -43,7 +43,7 @@ class MyController extends MandrillWebhookController {
 post('mandrill-webhook', ['as' => 'mandrill.webhook', 'uses' => 'MandrillController@handleWebHook']);
 ```
 
-3) Make sure you add your webhook in Mandril to point to your route. You can do this here: https://mandrillapp.com/settings/webhooks
+3) Make sure you add your webhook in Mandrill to point to your route. You can do this here: https://mandrillapp.com/settings/webhooks
 
 ## Webhook Authentication
 Publish the configuration via

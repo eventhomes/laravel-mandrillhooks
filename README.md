@@ -10,12 +10,7 @@ A simple Mandrill webhook controller to help with email events. Useful for notif
 
 ## Basic Usage
 
-1) In your routes.php file add the following.
-```php
-post('mandrill-webhook', ['as' => 'mandrill.webhook', 'uses' => 'MandrillController@handleWebHook']);
-```
-
-2) Create a controller that extends MandrillWebhookController as follows. You can then handle any Mandrillapp webhook event.
+1) Create a controller that extends MandrillWebhookController as follows. You can then handle any Mandrillapp webhook event.
 ```php
 use EventHomes\Api\Webhooks\MandrillWebhookController;
 
@@ -43,6 +38,19 @@ class MyController extends MandrillWebhookController {
 }
 ```
 
+2) Create the route to handle the webhook. In your routes.php file add the following.
+```php
+post('mandrill-webhook', ['as' => 'mandrill.webhook', 'uses' => 'MandrillController@handleWebHook']);
+```
+
+## Webhook Authentication
+Publish the configuration via
+```php
+php artisan vendor:publish --provider="EventHomes\Api\Webhooks\MandrillWebhookServiceProvider"
+```
+Simply add your Mandril webhook key in the config file and requests will be authenticated.
+
+## Webhook Events
 [Webhook event types](https://mandrill.zendesk.com/hc/en-us/articles/205583217-Introduction-to-Webhooks#event-types):
 
 Event type              | Method             | Description
@@ -58,3 +66,6 @@ Clicked	                | handleClick()      | recipient clicked a link in a mes
 Recipient Unsubscribes  | handleUnsub()      | recipient unsubscribes
 Rejection Blacklist Changes	| handleBlacklist()  | triggered when a Rejection Blacklist entry is added, changed, or removed
 Rejection Whitelist Changes	| handleWhitelist()  | triggered when a Rejection Whitelist entry is added or removed
+
+## Contributers
+Special thanks to @rafaelbeckel and @minioak!

@@ -50,7 +50,7 @@ Publish the configuration via
 ```php
 php artisan vendor:publish --provider="EventHomes\Api\Webhooks\MandrillWebhookServiceProvider"
 ```
-Simply add your Mandril webhook key in the config file and requests will be authenticated.
+Simply add your Mandrill webhook key in the config file and requests will be authenticated.
 
 ## Webhook Events
 [Webhook event types](https://mandrill.zendesk.com/hc/en-us/articles/205583217-Introduction-to-Webhooks#event-types):

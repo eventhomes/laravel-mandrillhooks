@@ -21,7 +21,7 @@ class MandrillWebhookController extends Controller
             $events = $this->getJsonPayloadFromRequest($request);
 
             foreach ($events as $event) {
-                $eventName = isset($event['event']) ? $event['event'] : 'undefined';
+                $eventName = isset($event['event']) ? $event['event'] : isset($event['type']) ? $event['type'] : 'undefined';
                 $method = 'handle' . studly_case(str_replace('.', '_', $eventName));
 
                 if (method_exists($this, $method)) {

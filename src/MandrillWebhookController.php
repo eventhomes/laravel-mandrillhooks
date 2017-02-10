@@ -22,6 +22,9 @@ class MandrillWebhookController extends Controller
 
             foreach ($events as $event) {
                 $eventName = isset($event['event']) ? $event['event'] : 'undefined';
+                if($eventName == 'undefined' && isset($event['type'])){
+                    $eventName = $event['type'];
+                }
                 $method = 'handle' . studly_case(str_replace('.', '_', $eventName));
 
                 if (method_exists($this, $method)) {

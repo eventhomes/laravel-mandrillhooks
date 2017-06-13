@@ -43,7 +43,9 @@ class MyController extends MandrillWebhookController {
 post('mandrill-webhook', ['as' => 'mandrill.webhook', 'uses' => 'MandrillController@handleWebHook']);
 ```
 3) Exclude your route from CSRF protection so it will not fail.
-[Excluding URIs From CSRF Protection](https://laravel.com/docs/5.4/csrf#csrf-excluding-uris):
+```
+[Excluding URIs From CSRF Protection](https://laravel.com/docs/5.4/csrf#csrf-excluding-uris)
+```
 
 4) Make sure you add your webhook in Mandrill to point to your route. You can do this here: https://mandrillapp.com/settings/webhooks
 

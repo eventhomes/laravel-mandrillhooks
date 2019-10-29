@@ -4,6 +4,7 @@ namespace EventHomes\Api\Webhooks;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\Response;
 
 class MandrillWebhookController extends Controller
@@ -25,7 +26,7 @@ class MandrillWebhookController extends Controller
                 if($eventName == 'undefined' && isset($event['type'])){
                     $eventName = $event['type'];
                 }
-                $method = 'handle' . studly_case(str_replace('.', '_', $eventName));
+                $method = 'handle' . Str::studly(str_replace('.', '_', $eventName));
 
                 if (method_exists($this, $method)) {
                     $this->{$method}($event);

@@ -1,4 +1,4 @@
-# Laravel 5 / Lumen 5 Mandrill Webhook Controller
+# Laravel Mandrill Webhook Controller
 [![Latest Version](https://img.shields.io/github/release/eventhomes/laravel-mandrillhooks.svg?style=flat-square)](https://github.com/eventhomes/laravel-mandrillhooks/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Total Downloads](https://img.shields.io/packagist/dt/eventhomes/laravel-mandrillhooks.svg?style=flat-square)](https://packagist.org/packages/eventhomes/laravel-mandrillhooks)
